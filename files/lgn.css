@@ -1,46 +1,71 @@
 body{
-    background-image: url("image.jpg");
-    background-repeat: no-repeat;
-    background-position: right;
+    background:#b693fe url("image.jpg") no-repeat fixed right;
     background-size: cover;
 }
 main{
-    background-color: rgba(0,0,0,0.7);
-    width: 20%;
+    background-color: rgba(0,0,0,0.8);
+    max-width: 250px;
     height: 320px;
     margin: auto;
     text-align: center;
-    margin-top: 10%;
-    border: 1px solid #000;
+    margin-top: 12%;
+    border: 0px;
     box-shadow: 0 4px 4px rgba(0,0,0,0.7),0 20px 30px rgba(0,0,0,0.5);
 }
-[value="username"],[value="password"]{
+[id="uname"],[id="pass"]{
     opacity: 0.8;
     border: 3px solid rgba(0,0,0,1);
-    border-radius: 5px;
+    border-radius: 30px;
     margin: 10px;
     padding: 10px;
     box-shadow: 0 4px 4px rgba(0,0,0,0.4);
 }
 [action="post"]{
-    margin-top: 20px;
+    padding-top: 20px;
     text-transform: uppercase;
-    font-weight: 400px;
-    font-size: 40px;
+    font-size: 30px;
     font-family: monospace;
-    color: white;
+    color: rgba(255,255,255,0.7);
     font-stretch: wider;
     padding-bottom: 13px;
-    font-family: 'Blinker', monospace;
-    text-shadow: rgba(0,0,0,0.4);
+    font-family: 'Audiowide', cursive;
+    text-shadow: 0 2px 4px rgba(255,255,255,0.5);
 }
-[type="submit"]{
-    margin: 10px 50px 10px 50px;
+[type="submit"],[type="reset"]{
+    margin: 5px 10px 5px 10px;
     border: 2px solid black;
     padding: 8px 20px 8px 20px;
-    box-shadow: 0 4px 4px rgba(0,0,0,0.6);
-    width: 120px;
+    color: rgba(255,255,255,0.7);
+    box-shadow: 0 1px 3px rgba(255,255,255,0.2);
+    max-width: 120px;
     border-radius: 30px;
     background-color: black;
-
+}
+a{
+    text-shadow: none;
+    color: white;
+}
+span{
+    font-family: 'Blinker', monospace;
+    font-size: 12px;
+}
+#google{
+    margin: 5px 10px 5px 10px;
+    border: 2px solid white;
+    padding: 8px 20px 8px 20px;
+    color: rgba(0,0,0,0.7);
+    box-shadow: 0 1px 3px rgba(255,255,255,0.2);
+    max-width: 120px;
+    border-radius: 30px;
+    background-color: white;
+}
+#facebook{
+    margin: 5px 10px 5px 10px;
+    border: 2px solid rgb(59,89,152);
+    padding: 8px 20px 8px 20px;
+    color: rgba(255,255,255,0.7);
+    box-shadow: 0 1px 3px rgba(255,255,255,0.2);
+    max-width: 120px;
+    border-radius: 30px;
+    background-color: rgb(59,89,152);
 }
