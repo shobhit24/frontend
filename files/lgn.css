@@ -1,25 +1,41 @@
 body{
-    background:#b693fe url("image.jpg") no-repeat fixed right;
-    background-size: cover;
+    background: linear-gradient(45deg, #607D8B, #263238);
 }
 main{
     background-color: rgba(0,0,0,0.8);
     max-width: 250px;
     height: 320px;
-    margin: auto;
+    position: fixed;
+    left: 40%;
+    top: 20%;
     text-align: center;
-    margin-top: 12%;
+    border-radius: 10px;
     border: 0px;
     box-shadow: 0 4px 4px rgba(0,0,0,0.7),0 20px 30px rgba(0,0,0,0.5);
 }
 [id="uname"],[id="pass"]{
     opacity: 0.8;
-    border: 3px solid rgba(0,0,0,1);
+    border: 3px transparent rgba(0,0,0,1);
     border-radius: 30px;
     margin: 10px;
     padding: 10px;
     box-shadow: 0 4px 4px rgba(0,0,0,0.4);
 }
+[id="uname"]:hover,[id="pass"]:hover{
+    animation-name: width;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes width{
+    0%{
+        padding: 10px;
+    }
+    100%{
+        padding: 10px 20px 10px 20px;
+        
+    }
+}
+
 [action="post"]{
     padding-top: 20px;
     text-transform: uppercase;
@@ -36,10 +52,24 @@ main{
     border: 2px solid black;
     padding: 8px 20px 8px 20px;
     color: rgba(255,255,255,0.7);
-    box-shadow: 0 1px 3px rgba(255,255,255,0.2);
-    max-width: 120px;
+    box-shadow: 0 1px 2px rgba(255,255,255,0.1);
+    width: 140px;
     border-radius: 30px;
     background-color: black;
+}
+[type="submit"]:hover,[type="reset"]:hover{
+    animation-name: small-width;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes small-width{
+    0%{
+        transform: scaleX(1);
+    }
+    100%{
+        transform: scaleX(1.1);
+
+    }
 }
 a{
     text-shadow: none;
@@ -49,7 +79,7 @@ span{
     font-family: 'Blinker', monospace;
     font-size: 12px;
 }
-#google{
+/* #google{
     margin: 5px 10px 5px 10px;
     border: 2px solid white;
     padding: 8px 20px 8px 20px;
@@ -68,4 +98,4 @@ span{
     max-width: 120px;
     border-radius: 30px;
     background-color: rgb(59,89,152);
-}
+} */
