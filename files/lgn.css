@@ -20,20 +20,32 @@ main{
     margin: 10px;
     padding: 10px;
     box-shadow: 0 4px 4px rgba(0,0,0,0.4);
+    animation-name: reverse;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
 }
 [id="uname"]:hover,[id="pass"]:hover{
     animation-name: width;
-    animation-duration: 0.5s;
+    animation-duration: 0.2s;
     animation-fill-mode: forwards;
+    animation-timing-function: linear;
 }
 @keyframes width{
     0%{
-        padding: 10px;
+        transform: scaleX(1);
     }
     100%{
-        padding: 10px 20px 10px 20px;
-        
+            transform: scaleX(1.05);
     }
+}
+@keyframes reverse{
+    0%{    
+        transform: scaleX(1.05);
+    }
+    100%{
+        transform: scaleX(1);
+    }
+    
 }
 
 [action="post"]{
@@ -48,6 +60,7 @@ main{
     text-shadow: 0 2px 4px rgba(255,255,255,0.5);
 }
 [type="submit"],[type="reset"]{
+    font-size: 1.1vw;
     margin: 5px 10px 5px 10px;
     border: 2px solid black;
     padding: 8px 20px 8px 20px;
@@ -56,10 +69,13 @@ main{
     width: 140px;
     border-radius: 30px;
     background-color: black;
+    animation-name: small-width-reverse;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
 }
 [type="submit"]:hover,[type="reset"]:hover{
     animation-name: small-width;
-    animation-duration: 0.5s;
+    animation-duration: 0.2s;
     animation-fill-mode: forwards;
 }
 @keyframes small-width{
@@ -67,8 +83,15 @@ main{
         transform: scaleX(1);
     }
     100%{
-        transform: scaleX(1.1);
-
+        transform: scaleX(1.05);
+    }
+}
+@keyframes small-width-reverse{
+    100%{
+        transform: scaleX(1);
+    }
+    0%{
+        transform: scaleX(1.05);
     }
 }
 a{
@@ -79,8 +102,8 @@ span{
     font-family: 'Blinker', monospace;
     font-size: 12px;
 }
-/* #google{
-    margin: 5px 10px 5px 10px;
+#google,#facebook{
+    margin: 25px 10px 25px 10px;
     border: 2px solid white;
     padding: 8px 20px 8px 20px;
     color: rgba(0,0,0,0.7);
@@ -88,14 +111,40 @@ span{
     max-width: 120px;
     border-radius: 30px;
     background-color: white;
+    animation-name: glow-reverse;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
 }
 #facebook{
-    margin: 5px 10px 5px 10px;
     border: 2px solid rgb(59,89,152);
-    padding: 8px 20px 8px 20px;
     color: rgba(255,255,255,0.7);
-    box-shadow: 0 1px 3px rgba(255,255,255,0.2);
-    max-width: 120px;
-    border-radius: 30px;
     background-color: rgb(59,89,152);
-} */
+    
+}
+#facebook:hover, #google:hover{
+    animation-name: glow;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+@keyframes glow{
+    0%{
+        transform: scaleX(1);
+        box-shadow: 0 1px 3px rgba(255,255,255,0.2);
+    }
+    100%{
+        transform: scaleX(1.1);
+        box-shadow: 0 1px 3px rgba(255,255,255,0.4);
+    }
+}
+@keyframes glow-reverse{
+    100%{
+        transform: scaleX(1);
+        box-shadow: 0 1px 3px rgba(255,255,255,0.2);
+    }
+    0%{
+        transform: scaleX(1.1);
+        box-shadow: 0 1px 3px rgba(255,255,255,0.4);
+    }
+}
